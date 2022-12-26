@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+body {
+  background-color: #121212;
+  color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 6px;
+}
+
+p.smaller {
+  font-style: italic;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.card-wrapper {
+  height: 100vh;
+  width: 100vw;
+  padding: 100px 50px;
+}
+
+.card-wrapper .card {
+  border: 1px solid #ebebeb;
+  width: 100%;
+  height: 100%;
+  padding-left: 75px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-wrapper .card.row {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-wrapper .card.row > * {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.card-wrapper .card .border {
+  border: 1px solid #ebebeb;
+}
+
+.card-wrapper .card iframe {
+  min-height: 60%;
+  flex-basis: 100%;
+  flex-grow: 2;
+}
+
+nav {
+  position: fixed;
+  left: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: calc(50% - (15px * 4 + 20px * 3) / 2);
+}
+
+.dot {
+  cursor: pointer;
+  width: 20px;
+  height: 15px;
+  border-radius: 1000px;
+  border: 3px solid #fff;
+  background-color: #00000000;
+  transition: all 0.25s linear, background-color 0.5s linear;
+}
+
+.dot.active {
+  width: 30px;
+}
+
+.dot .fill {
+  width: 0;
+  height: 100%;
+  transition: all 0.25s linear;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+.dot.active .fill {
+  background-color: #fff;
+  width: 100%;
+}
